@@ -7,7 +7,7 @@ repo = Repo('./')
 def main():
     filename = input("ficheiro a editar: ")
     while True:
-        f = open("./" + filename, "a+", encoding="utf-8")
+        f = open("./Hugo" + filename, "a+", encoding="utf-8")
         texto = input("Escreva o que desejar: ")
         if texto == ".":
             f.close()
