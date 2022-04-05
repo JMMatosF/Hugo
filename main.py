@@ -1,10 +1,8 @@
 import git
-
-from github import Github
 from git import Repo
 
 repo = Repo('./')
-g = Github("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")
+
 
 def main():
     filename = input("ficheiro a editar: ")
@@ -30,6 +28,7 @@ def main():
 with repo.config_writer() as git_config:
     git_config.set_value('user', 'email', 'jmatosfernandes@live.com.pt')
     git_config.set_value('user', 'name', 'JMMatosF')
+    git_config.set_value('user', 'token', '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')
 
 with repo.config_reader() as git_config:
     print(git_config.get_value('user', 'email'))
