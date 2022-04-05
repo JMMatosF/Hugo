@@ -1,9 +1,10 @@
 import git
 
+from github import Github
 from git import Repo
 
 repo = Repo('./')
-
+g = Github("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")
 
 def main():
     filename = input("ficheiro a editar: ")
