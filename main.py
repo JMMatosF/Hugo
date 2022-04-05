@@ -39,7 +39,7 @@ print('Remotes:')
 for remote in repo.remotes:
     print(f'- {remote.name} {remote.url}')
 try:
-    remote = repo.create_remote('origin', url='git@github.com:JMMatosF/Hugo.git')
+    remote = repo.create_remote('origin', url='https://github.com/JMMatosF/Hugo.git')
 except git.exc.GitCommandError as error:
     print(f'Error creating remote: {error}')
 
