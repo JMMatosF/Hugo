@@ -28,7 +28,6 @@ def main():
 with repo.config_writer() as git_config:
     git_config.set_value('user', 'email', 'jmatosfernandes@live.com.pt')
     git_config.set_value('user', 'name', 'JMMatosF')
-    git_config.set_value('user', 'token', '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')
 
 with repo.config_reader() as git_config:
     print(git_config.get_value('user', 'email'))
@@ -39,7 +38,7 @@ print('Remotes:')
 for remote in repo.remotes:
     print(f'- {remote.name} {remote.url}')
 try:
-    remote = repo.create_remote('origin', url='https://github.com/JMMatosF/Hugo.git')
+    remote = repo.create_remote('origin', url='https://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@github.com/JMMatosF/Hugo.git)')
 except git.exc.GitCommandError as error:
     print(f'Error creating remote: {error}')
 
