@@ -1,9 +1,13 @@
 import git
+from flask import Flask
 from git import Repo
+
+app = Flask(__name__)
 
 repo = Repo('./')
 
 
+@app.route('/')
 def main():
     filename = input("ficheiro a editar: ")
     while True:
@@ -42,4 +46,5 @@ try:
 except git.exc.GitCommandError as error:
     print(f'Error creating remote: {error}')
 
-main()
+if __name__ == '__main__':
+    app.run()
