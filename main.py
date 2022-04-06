@@ -1,15 +1,17 @@
 import git
+import markdown
 from flask import Flask
 from git import Repo
 
 app = Flask(__name__)
 
 repo = Repo('./')
+filename = input("ficheiro a editar: ")
 
 
 @app.route('/')
 def main():
-    filename = input("ficheiro a editar: ")
+
     while True:
         f = open(filename, "a+", encoding="utf-8")
         texto = input("Escreva o que desejar: ")
