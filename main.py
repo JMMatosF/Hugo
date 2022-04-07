@@ -1,12 +1,19 @@
+import os
 import git
-import markdown
 from flask import Flask
 from git import Repo
 
-app = Flask(__name__)
 
-repo = Repo('./')
+app = Flask(__name__)
+a = input("nome do site: ")
+os.system("hugo new site " + a)
+os.chdir(a)
+os.system("git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke")
+os.system("echo theme = \'ananke\' >> config.toml")
+os.system("hugo new posts/my-first-post.md")
+os.system("hugo server -D")
 filename = input("ficheiro a editar: ")
+repo = Repo('./')
 
 
 @app.route('/')

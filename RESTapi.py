@@ -1,19 +1,18 @@
 import markdown
 import flask
-from flask import jsonify
-
+import main
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-with open('a.md', 'r') as f:
+with open(main.filename, 'r') as f:
     text = f.read()
     html = markdown.markdown(text)
 
 
 @app.route('/', methods=['GET'])
 def home():
-    return jsonify(html)
+    return html
 
 
 app.run()

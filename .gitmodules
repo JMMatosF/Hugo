@@ -1,3 +1,42 @@
 [submodule "themes/ananke"]
 	path = themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "quickstart/themes/ananke"]
+	path = quickstart/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "quickstart/quickstart/themes/ananke"]
+	path = quickstart/quickstart/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "algo/themes/ananke"]
+	path = algo/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "sss/themes/ananke"]
+	path = sss/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "aaa/themes/ananke"]
+	path = aaa/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "andre/themes/ananke"]
+	path = andre/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "sim/themes/ananke"]
+	path = sim/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "asd/themes/ananke"]
+	path = asd/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "jorue/themes/ananke"]
+	path = jorue/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "gg/themes/ananke"]
+	path = gg/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "ss/themes/ananke"]
+	path = ss/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "s/themes/ananke"]
+	path = s/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "aaaa/themes/ananke"]
+	path = aaaa/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
