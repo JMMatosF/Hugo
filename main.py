@@ -1,5 +1,4 @@
 import os
-import shutil
 import git
 from flask import Flask
 from git import Repo
@@ -8,19 +7,28 @@ app = Flask(__name__)
 
 i1 = input("tem um site ou nao?: ")
 if i1 == 'sim':
-    os.chdir("exemplo1")
+    nDir = input("nome do site: ")
+    os.chdir(nDir)
     i2 = input("Pretende criar um novo post?: ")
     if i2 == 'sim':
-        # os.chdir("content/posts")
         nficheiro = input("Escolha nome do ficheiro: ")
+        titulo = input("Escolha titulo do post: ")
+
+        path = os.path.join("content", "posts", nficheiro)
+        file = open(path + '.md', 'a+')
+        file.write("---")
+        file.write("\n")
+        file.write("title: " + "\"" + titulo + "\"")
+        file.write("\n")
+        file.write("draft: true")
+        file.write("\n")
+        file.write("---")
+        file.write("\n")
+
         while True:
             text = input("Escreva o que desejar:  ")
-            path = os.path.join("content","posts", nficheiro)
-            file = open(path + '.md', 'a+')
             if text == ".":
                 file.close()
-                # shutil.move("exemplo1/" + nficheiro, "cajo/content/posts/" + nficheiro)
-                print(os.getcwd())
                 os.system("hugo server -D")
                 # repo.git.add("main.py")
                 # repo.git.add(filename)
@@ -30,19 +38,29 @@ if i1 == 'sim':
                 # origin.push()
             if text == "delete":
                 file.truncate(0)
-                file.write(text)
-                file.write("\n")
+
+            file.write(text)
+            file.write("\n")
+
     if i2 == 'nao':
-        print(os.getcwd())
         os.system("hugo server -D")
 
 
 if i1 == 'nao':
-    a = input("nome do site: ")
+
+    a = input("nome do diretorio: ")
     os.system("hugo new site " + a)
     os.chdir(a)
+    sitename = input("Nome do site: ")
     os.system("git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke")
     file = open('config.toml', 'a')
+    file.truncate(0)
+    file.write("baseURL = \'http://example.org/\'")
+    file.write("\n")
+    file.write("languageCode = \'en-us\'")
+    file.write("\n")
+    file.write("title = " + "\'" + sitename + "\'")
+    file.write("\n")
     file.write("theme = 'ananke'")
     file.close()
     os.system("hugo new posts/my-first-post.md")

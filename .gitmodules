@@ -187,3 +187,18 @@
 [submodule "exemplo1/themes/ananke"]
 	path = exemplo1/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "penisLeguas/themes/ananke"]
+	path = penisLeguas/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "ChuqNoia/themes/ananke"]
+	path = ChuqNoia/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "algo3/themes/ananke"]
+	path = algo3/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "algo4/themes/ananke"]
+	path = algo4/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "CHUQ/themes/ananke"]
+	path = CHUQ/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
