@@ -11,15 +11,15 @@ if i1 == 'sim':
     os.chdir("exemplo1")
     i2 = input("Pretende criar um novo post?: ")
     if i2 == 'sim':
-        os.chdir("content/posts")
+        # os.chdir("content/posts")
         nficheiro = input("Escolha nome do ficheiro: ")
         while True:
             text = input("Escreva o que desejar:  ")
-            file = open(nficheiro + '.md', 'a+')
+            path = os.path.join("content","posts", nficheiro)
+            file = open(path + '.md', 'a+')
             if text == ".":
                 file.close()
                 # shutil.move("exemplo1/" + nficheiro, "cajo/content/posts/" + nficheiro)
-                os.system("exemplo1/")
                 print(os.getcwd())
                 os.system("hugo server -D")
                 # repo.git.add("main.py")
