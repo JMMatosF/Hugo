@@ -1,0 +1,5 @@
+baseURL = 'https://JMMatosF.github.io'
+languageCode = 'en-us'
+title = 'exemplo3'
+theme = 'ananke'
+publishDir = 'docs'

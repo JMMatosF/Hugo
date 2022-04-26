@@ -202,3 +202,9 @@
 [submodule "CHUQ/themes/ananke"]
 	path = CHUQ/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "exemplo2/themes/ananke"]
+	path = exemplo2/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "exemplo3/themes/ananke"]
+	path = exemplo3/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git

@@ -1,5 +1,6 @@
 import os
 import git
+import shutil
 from flask import Flask
 from git import Repo
 
@@ -64,6 +65,9 @@ if i1 == 'nao':
     file.write("theme = 'ananke'")
     file.close()
     os.system("hugo new posts/my-first-post.md")
+    # original = r'Hugo\gh-pages.yml'
+    # target = r'' + a
+    # shutil.copyfile(original, target)
     os.system("hugo server -D")
 
 filename = input("ficheiro a editar: ")
