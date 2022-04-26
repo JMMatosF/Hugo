@@ -1,4 +1,4 @@
 baseURL = 'https://JMMatosF.github.io/Hugo'
 languageCode = 'en-us'
-title = 'exemplo5'
+title = 'exempla'
 theme = 'ananke'publishDir = "docs"
