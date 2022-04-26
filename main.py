@@ -4,7 +4,23 @@ import shutil
 from flask import Flask
 from git import Repo
 
-app = Flask(__name__)
+repo = Repo('./')
+with repo.config_writer() as git_config:
+    git_config.set_value('user', 'email', 'jmatosfernandes@live.com.pt')
+    git_config.set_value('user', 'name', 'JMMatosF')
+
+with repo.config_reader() as git_config:
+    print(git_config.get_value('user', 'email'))
+    print(git_config.get_value('user', 'name'))
+
+# List remotes
+print('Remotes:')
+for remote in repo.remotes:
+    print(f'- {remote.name} {remote.url}')
+try:
+    remote = repo.create_remote('origin', url='git@github.com:JMMatosF/Hugo.git')
+except git.exc.GitCommandError as error:
+    print(f'Error creating remote: {error}')
 
 i1 = input("tem um site ou nao?: ")
 if i1 == 'sim':
@@ -30,6 +46,10 @@ if i1 == 'sim':
             text = input("Escreva o que desejar:  ")
             if text == ".":
                 file.close()
+                repo.git.add(nficheiro)
+                repo.git.commit('-m', 'ola')
+                origin = repo.remote(name='origin')
+                origin.push()
                 os.system("hugo")
                 # repo.git.add("main.py")
                 # repo.git.add(filename)
@@ -44,38 +64,39 @@ if i1 == 'sim':
             file.write("\n")
 
     if i2 == 'nao':
-        os.system("hugo server -D")
-
+        os.system("hugo")
 
 if i1 == 'nao':
-
     a = input("nome do diretorio: ")
-    os.system("hugo new site " + a)
+    os.system("hugo new site " + a + " --force")
     os.chdir(a)
     sitename = input("Nome do site: ")
     os.system("git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke")
     file = open('config.toml', 'a')
     file.truncate(0)
-    file.write("baseURL = \'http://example.org/\'")
+    file.write("baseURL = \'https://JMMatosF.github.io/Hugo\'")
     file.write("\n")
     file.write("languageCode = \'en-us\'")
     file.write("\n")
     file.write("title = " + "\'" + sitename + "\'")
     file.write("\n")
     file.write("theme = 'ananke'")
+    file.write("\n")
+    file.write("publishDir = \"docs\"")
     file.close()
     os.system("hugo new posts/my-first-post.md")
+    repo.git.add(a)
+    repo.git.commit('-m', 'ola')
+    origin = repo.remote(name='origin')
+    origin.push()
     # original = r'Hugo\gh-pages.yml'
     # target = r'' + a
     # shutil.copyfile(original, target)
-    os.system("hugo server -D")
-
-filename = input("ficheiro a editar: ")
-repo = Repo('./')
+    os.system("hugo")
 
 
-@app.route('/')
 def main():
+    """
     while True:
         f = open(filename, "a+", encoding="utf-8")
         texto = input("Escreva o que desejar: ")
@@ -91,25 +112,4 @@ def main():
         f.write(texto)
         f.write("\n")
         if texto == "delete":
-            f.truncate(0)
-
-
-with repo.config_writer() as git_config:
-    git_config.set_value('user', 'email', 'jmatosfernandes@live.com.pt')
-    git_config.set_value('user', 'name', 'JMMatosF')
-
-with repo.config_reader() as git_config:
-    print(git_config.get_value('user', 'email'))
-    print(git_config.get_value('user', 'name'))
-
-# List remotes
-print('Remotes:')
-for remote in repo.remotes:
-    print(f'- {remote.name} {remote.url}')
-try:
-    remote = repo.create_remote('origin', url='git@github.com:JMMatosF/Hugo.git')
-except git.exc.GitCommandError as error:
-    print(f'Error creating remote: {error}')
-
-if __name__ == '__main__':
-    app.run()
+            f.truncate(0) """
