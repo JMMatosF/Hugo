@@ -30,7 +30,7 @@ if i1 == 'sim':
             text = input("Escreva o que desejar:  ")
             if text == ".":
                 file.close()
-                os.system("hugo server -D")
+                os.system("hugo")
                 # repo.git.add("main.py")
                 # repo.git.add(filename)
                 # commit = input("Mensagem de commit: ")
