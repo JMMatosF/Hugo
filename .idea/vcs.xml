@@ -5,6 +5,7 @@
     <mapping directory="$PROJECT_DIR$/Joroe" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Joroe/themes/ananke" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cajo/themes/ananke" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/exemple/themes/ananke" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/quickstart" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/quickstart/themes/ananke" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/themes/ananke" vcs="Git" />
