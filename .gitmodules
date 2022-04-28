@@ -226,3 +226,6 @@
 [submodule "furto/themes/ananke"]
 	path = furto/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "ggg/themes/ananke"]
+	path = ggg/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git

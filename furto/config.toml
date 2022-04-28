@@ -1,4 +1,0 @@
-baseURL = 'baseURL = https://example.org/Hugo'languageCode = 'en-us'
-title = 'furto'
-theme = 'ananke'
-publishDir = "docs"
