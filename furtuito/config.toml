@@ -1,0 +1,4 @@
+languageCode = 'en-us'
+title = 'Belo Furto'
+theme = 'ananke'
+publishDir = "docs"

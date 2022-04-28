@@ -220,3 +220,6 @@
 [submodule "exemple/themes/ananke"]
 	path = exemple/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "furtuito/themes/ananke"]
+	path = furtuito/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
