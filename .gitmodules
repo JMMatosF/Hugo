@@ -229,3 +229,6 @@
 [submodule "ggg/themes/ananke"]
 	path = ggg/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "xxxxx/themes/ananke"]
+	path = xxxxx/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
