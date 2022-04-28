@@ -235,3 +235,6 @@
 [submodule "hjk/themes/ananke"]
 	path = hjk/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "dfghj/themes/ananke"]
+	path = dfghj/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
