@@ -238,3 +238,6 @@
 [submodule "dfghj/themes/ananke"]
 	path = dfghj/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "vbg/themes/ananke"]
+	path = vbg/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
