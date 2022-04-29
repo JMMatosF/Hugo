@@ -28,10 +28,12 @@ except git.exc.GitCommandError as error:
 
 ########################################
 def main():
+
     i1 = input("tem um site ou nao?: ")
     if i1 == 'sim':
         nDir = input("nome do site: ")
         os.chdir(nDir)
+        os.system("hugo --minify")
         i2 = input("Pretende criar um novo post?: ")
         if i2 == 'sim':
             nficheiro = input("Escolha nome do ficheiro: ")
@@ -73,9 +75,8 @@ def main():
                 file.write("\n")
 
         if i2 == 'nao':
+            os.system('xdg-open  http://localhost:1313/Hugo')
             os.system("hugo server -D")
-            time.sleep(2.0)
-            os.system('xdg-open  http://localhost:1313/')
 
     if i1 == 'nao':
         a = input("nome do diretorio: ")
