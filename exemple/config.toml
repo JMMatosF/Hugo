@@ -2,4 +2,4 @@ baseURL = 'https://jmmatosf.github.io/Hugo/'
 languageCode = 'en-us'
 title = 'exemple'
 theme = 'ananke'
-publishDir = "exemple/docs"
+publishDir = "docs"
