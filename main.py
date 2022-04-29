@@ -57,7 +57,7 @@ def main():
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
-                    os.system('xdg-open  http://localhost:1313')
+                    os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
                     os.system("hugo server -D")
                     # repo.git.add("main.py")
                     # repo.git.add(filename)

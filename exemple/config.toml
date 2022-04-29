@@ -1,4 +1,4 @@
-baseURL = 'https://jmmatosf.github.io/Hugo/'
+baseURL = 'https://JMMatosF.github.io/Hugo/'
 languageCode = 'en-us'
 title = 'exemple'
 theme = 'ananke'
