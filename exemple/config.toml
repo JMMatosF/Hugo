@@ -1,5 +1,5 @@
-baseURL = 'https://JMMatosF.github.io/Hugo/'
+baseURL = 'https://jmmatosf.github.io/Hugo/'
 languageCode = 'en-us'
 title = 'exemple'
 theme = 'ananke'
-publishDir = "docs"
+publishDir = "exemple/docs"

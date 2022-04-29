@@ -33,7 +33,6 @@ def main():
     if i1 == 'sim':
         nDir = input("nome do site: ")
         os.chdir(nDir)
-        os.system("hugo --minify")
         # repo.git.add(nDir)
         # repo.git.commit('-m','ola')
         # origin = repo.remote(name='origin')
@@ -63,7 +62,7 @@ def main():
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
-                    os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
+                    # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
                     os.system("hugo server -D")
                     # repo.git.add("main.py")
                     # repo.git.add(filename)
@@ -79,7 +78,7 @@ def main():
                 file.write("\n")
 
         if i2 == 'nao':
-            os.system('xdg-open  http://localhost:1313/Hugo')
+            # os.system('xdg-open  http://localhost:1313/Hugo/')
             os.system("hugo server -D")
 
     if i1 == 'nao':
