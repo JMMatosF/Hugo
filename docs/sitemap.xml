@@ -2,11 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jmmatosf.github.io/Hugo/posts/t/</loc>
+  </url><url>
+    <loc>https://jmmatosf.github.io/Hugo/posts/eheh/</loc>
+  </url><url>
     <loc>https://jmmatosf.github.io/Hugo/categories/</loc>
+  </url><url>
+    <loc>https://jmmatosf.github.io/Hugo/posts/ola/</loc>
+  </url><url>
+    <loc>https://jmmatosf.github.io/Hugo/posts/algo/</loc>
   </url><url>
     <loc>https://jmmatosf.github.io/Hugo/</loc>
   </url><url>
     <loc>https://jmmatosf.github.io/Hugo/posts/</loc>
+  </url><url>
+    <loc>https://jmmatosf.github.io/Hugo/posts/%E1%BA%BDheh/</loc>
   </url><url>
     <loc>https://jmmatosf.github.io/Hugo/tags/</loc>
   </url><url>
