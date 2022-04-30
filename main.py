@@ -80,9 +80,8 @@ def main():
 
         if i2 == 'nao':
             os.system('git add .')
-            repo.git.commit('-m', 'ola')
-            origin = repo.remote(name='origin')
-            origin.push()
+            os.system('git commit -m \' commit \'')
+            os.system("git push")
             os.system("hugo")
             # os.system('xdg-open  http://localhost:1313/Hugo/')
             os.system("hugo server -D")
