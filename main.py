@@ -1,9 +1,8 @@
 import os
-import time
-
+# import time
 import git
-import shutil
-from flask import Flask
+# import shutil
+# from flask import Flask
 from git import Repo
 
 repo = Repo('./')
@@ -28,7 +27,6 @@ except git.exc.GitCommandError as error:
 
 ########################################
 def main():
-
     i1 = 'sim'
 
     if i1 == 'sim':
@@ -58,6 +56,7 @@ def main():
                     file.close()
                     path = os.path.join("content", "posts", nficheiro)
                     print(os.getcwd())
+                    repo.git.add(all=True)
                     repo.git.add(path + '.md')
                     repo.git.add(os.path.join("docs"))
                     repo.git.commit('-m', 'ola')
