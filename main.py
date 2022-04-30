@@ -56,7 +56,7 @@ def main():
                     file.close()
                     path = os.path.join("content", "posts", nficheiro)
                     print(os.getcwd())
-                    repo.git.add(all=True)
+                    os.system('git add .')
                     repo.git.add(path + '.md')
                     repo.git.add(os.path.join("docs"))
                     repo.git.commit('-m', 'ola')
@@ -79,6 +79,11 @@ def main():
                 file.write("\n")
 
         if i2 == 'nao':
+            os.system('git add .')
+            repo.git.commit('-m', 'ola')
+            origin = repo.remote(name='origin')
+            origin.push()
+            os.system("hugo")
             # os.system('xdg-open  http://localhost:1313/Hugo/')
             os.system("hugo server -D")
 
