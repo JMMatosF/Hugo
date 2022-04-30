@@ -1,5 +1,5 @@
 [submodule "themes/ananke"]
-	path = themes/ananke
+	path = Hugo/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
 [submodule "quickstart/themes/ananke"]
 	path = quickstart/themes/ananke

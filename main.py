@@ -29,10 +29,11 @@ except git.exc.GitCommandError as error:
 ########################################
 def main():
 
-    i1 = input("tem um site ou nao?: ")
+    i1 = 'sim'
+
     if i1 == 'sim':
-        nDir = input("nome do site: ")
-        os.chdir(nDir)
+        # nDir = input("nome do site: ")
+        # os.chdir(nDir)
         # repo.git.add(nDir)
         # repo.git.commit('-m','ola')
         # origin = repo.remote(name='origin')
@@ -55,10 +56,10 @@ def main():
                 text = input("Escreva o que desejar:  ")
                 if text == ".":
                     file.close()
-                    path = os.path.join("exemple", "content", "posts", nficheiro)
+                    path = os.path.join("content", "posts", nficheiro)
                     print(os.getcwd())
                     repo.git.add(path + '.md')
-                    repo.git.add(os.path.join("exemple", "docs"))
+                    repo.git.add(os.path.join("docs"))
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
