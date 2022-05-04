@@ -65,7 +65,7 @@ def main():
                     os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
                     # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
                     os.system("hugo")
-                    os.system("hugo server -D")
+                    # os.system("hugo server -D")
                     # repo.git.add("main.py")
                     # repo.git.add(filename)
                     # commit = input("Mensagem de commit: ")
