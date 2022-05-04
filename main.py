@@ -62,6 +62,7 @@ def main():
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
+                    os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
                     # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
                     os.system("hugo")
                     os.system("hugo server -D")
