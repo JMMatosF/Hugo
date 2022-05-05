@@ -58,7 +58,7 @@ def main():
                     path = os.path.join("content", "posts", nficheiro)
                     os.system("hugo")
                     repo.git.add(path + '.md')
-                    repo.git.add(os.path.join("docs/posts/" + nficheiro))
+                    repo.git.add(os.path.join("docs"))
                     repo.git.add(update=True)
                     repo.git.add(all=True)
                     repo.git.commit('-m', 'ola')
