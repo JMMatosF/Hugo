@@ -52,6 +52,8 @@ def main():
             file.write("\n")
             while True:
                 text = input("Escreva o que desejar:  ")
+                file.write(text)
+                file.write("\n")
                 if text == ".":
                     file.close()
                     path = os.path.join("content", "posts", nficheiro)
@@ -76,8 +78,7 @@ def main():
                 if text == "delete":
                     file.truncate(0)
 
-                file.write(text)
-                file.write("\n")
+
 
         if i2 == 'nao':
             os.system('git add .')
