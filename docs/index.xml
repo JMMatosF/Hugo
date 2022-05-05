@@ -7,15 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://jmmatosf.github.io/Hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>abc</title>
-      <link>https://jmmatosf.github.io/Hugo/posts/ggr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jmmatosf.github.io/Hugo/posts/ggr/</guid>
-      <description>abc .</description>
-    </item>
-    
-    <item>
       <title>algo</title>
       <link>https://jmmatosf.github.io/Hugo/posts/fff/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -88,24 +79,6 @@
     </item>
     
     <item>
-      <title>ehss</title>
-      <link>https://jmmatosf.github.io/Hugo/posts/algo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jmmatosf.github.io/Hugo/posts/algo/</guid>
-      <description>bla bla bla</description>
-    </item>
-    
-    <item>
-      <title>Exemplo dia 5</title>
-      <link>https://jmmatosf.github.io/Hugo/posts/a/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jmmatosf.github.io/Hugo/posts/a/</guid>
-      <description>Maio de de 2022</description>
-    </item>
-    
-    <item>
       <title>já funciona!!!!</title>
       <link>https://jmmatosf.github.io/Hugo/posts/teste2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -130,15 +103,6 @@
       
       <guid>https://jmmatosf.github.io/Hugo/posts/teste3/</guid>
       <description>veremos se resulta ou nao</description>
-    </item>
-    
-    <item>
-      <title>Teste 2</title>
-      <link>https://jmmatosf.github.io/Hugo/posts/gt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jmmatosf.github.io/Hugo/posts/gt/</guid>
-      <description>algo a mais bla bla bla .</description>
     </item>
     
     <item>

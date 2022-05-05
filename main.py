@@ -71,13 +71,19 @@ def main():
                 if text == "delete":
                     file.truncate(0)
 
-        if i2 == 'nao':
-            os.system('git add .')
-            os.system('git commit -m \' commit \'')
-            os.system("git push")
+        elif i2 == 'nao':
             os.system("hugo")
-            # os.system('xdg-open  http://localhost:1313/Hugo/')
-            os.system("hugo server -D")
+            os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
+        elif i2 == 'apagar':
+            i3 = input("post a apagar:")
+            os.remove('content/posts/' + i3 + '.md')
+            os.remove('docs/posts/' + i3 + '/index.html')
+            os.rmdir('docs/posts/' + i3)
+            os.system('hugo')
+            repo.git.add(all=True)
+            repo.git.commit('-m', 'apagado' + i3)
+            origin = repo.remote(name='origin')
+            origin.push()
 
     if i1 == 'nao':
         a = input("nome do diretorio: ")
