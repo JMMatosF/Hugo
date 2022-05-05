@@ -97,6 +97,15 @@
     </item>
     
     <item>
+      <title>Teste 2</title>
+      <link>https://jmmatosf.github.io/Hugo/posts/gt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmmatosf.github.io/Hugo/posts/gt/</guid>
+      <description>algo a mais bla bla bla .</description>
+    </item>
+    
+    <item>
       <title>Teste para ver se as paginas sao geradas corretamente</title>
       <link>https://jmmatosf.github.io/Hugo/posts/teste/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

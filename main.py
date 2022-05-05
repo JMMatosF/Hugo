@@ -78,8 +78,6 @@ def main():
                 if text == "delete":
                     file.truncate(0)
 
-
-
         if i2 == 'nao':
             os.system('git add .')
             os.system('git commit -m \' commit \'')
