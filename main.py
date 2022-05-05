@@ -6,7 +6,7 @@ import git
 from git import Repo
 
 repo = Repo('./')
-
+origin = repo.remote(name='origin')
 with repo.config_writer() as git_config:
     git_config.set_value('user', 'email', 'jmatosfernandes@live.com.pt')
     git_config.set_value('user', 'name', 'JMMatosF')
@@ -34,7 +34,6 @@ def main():
         # os.chdir(nDir)
         # repo.git.add(nDir)
         # repo.git.commit('-m','ola')
-        # origin = repo.remote(name='origin')
         # origin.push()
         i2 = input("Pretende criar um novo post?: ")
         if i2 == 'sim':
@@ -59,11 +58,10 @@ def main():
                     path = os.path.join("content", "posts", nficheiro)
                     os.system("hugo")
                     repo.git.add(path + '.md')
-                    repo.git.add(os.path.join("docs"))
-                    repo.git.add(update=True)
-                    repo.git.add(all=True)
+                    repo.git.add(os.path.join("docs/posts/" + nficheiro))
+                    # repo.git.add(update=True)
+                    # repo.git.add(all=True)
                     repo.git.commit('-m', 'ola')
-                    origin = repo.remote(name='origin')
                     origin.push()
                     os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
                     # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
@@ -82,7 +80,6 @@ def main():
             os.system('hugo')
             repo.git.add(all=True)
             repo.git.commit('-m', 'apagado ' + i3)
-            origin = repo.remote(name='origin')
             origin.push()
 
     if i1 == 'nao':
