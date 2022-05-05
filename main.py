@@ -75,13 +75,13 @@ def main():
             os.system("hugo")
             os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
         elif i2 == 'apagar':
-            i3 = input("post a apagar:")
+            i3 = input("post a apagar: ")
             os.remove('content/posts/' + i3 + '.md')
             os.remove('docs/posts/' + i3 + '/index.html')
             os.rmdir('docs/posts/' + i3)
             os.system('hugo')
             repo.git.add(all=True)
-            repo.git.commit('-m', 'apagado' + i3)
+            repo.git.commit('-m', 'apagado ' + i3)
             origin = repo.remote(name='origin')
             origin.push()
 
