@@ -61,6 +61,7 @@ def main():
                     repo.git.add(os.path.join("docs"))
                     repo.git.add(update=True)
                     repo.git.add(all=True)
+                    repo.git.add(os.path.join("docs", "posts", nficheiro))
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
