@@ -57,9 +57,10 @@ def main():
                 if text == ".":
                     file.close()
                     path = os.path.join("content", "posts", nficheiro)
-                    repo.git.add(update=True)
                     repo.git.add(path + '.md')
                     repo.git.add(os.path.join("docs"))
+                    repo.git.add(update=True)
+                    repo.git.add(all=True)
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
