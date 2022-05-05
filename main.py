@@ -56,7 +56,7 @@ def main():
                     file.close()
                     path = os.path.join("content", "posts", nficheiro)
                     print(os.getcwd())
-                    os.system('git add .')
+                    repo.git.add(update=True)
                     repo.git.add(path + '.md')
                     repo.git.add(os.path.join("docs"))
                     repo.git.commit('-m', 'ola')
