@@ -61,13 +61,16 @@ def main():
                     repo.git.add(os.path.join("docs"))
                     repo.git.add(update=True)
                     repo.git.add(all=True)
-                    repo.git.add(os.path.join("docs", "posts", nficheiro))
                     repo.git.commit('-m', 'ola')
                     origin = repo.remote(name='origin')
                     origin.push()
                     os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
                     # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
                     os.system("hugo")
+                    repo.git.add(os.path.join("docs", "posts", nficheiro))
+                    repo.git.commit('-m', 'ola')
+                    origin = repo.remote(name='origin')
+                    origin.push()
 
                 if text == "delete":
                     file.truncate(0)
