@@ -1,6 +1,7 @@
 import os
 # import time
 import git
+import cria_post
 # import shutil
 # from flask import Flask
 from git import Repo
@@ -37,13 +38,13 @@ def main():
         # origin.push()
         i2 = input("Pretende criar um novo post?: ")
         if i2 == 'sim':
-            nficheiro = input("Escolha nome do ficheiro: ")
-            titulo = input("Escolha titulo do post: ")
-            path = os.path.join("content", "posts", nficheiro)
+            title = input("Escolha titulo do post: ")
+            name = title.replace(" ", "_")
+            path = os.path.join("content", "posts", name)
             file = open(path + '.md', 'a+')
             file.write("---")
             file.write("\n")
-            file.write("title: " + "\"" + titulo + "\"")
+            file.write("title: " + "\"" + title + "\"")
             file.write("\n")
             file.write("draft: false")
             file.write("\n")
@@ -51,11 +52,12 @@ def main():
             file.write("\n")
             while True:
                 text = input("Escreva o que desejar:  ")
+                file.write("\n")
                 file.write(text)
                 file.write("\n")
                 if text == ".":
                     file.close()
-                    path = os.path.join("content", "posts", nficheiro)
+                    path = os.path.join("content", "posts", title)
                     os.system("hugo")
                     repo.git.add(path + '.md')
                     repo.git.add(os.path.join("docs"))
@@ -109,7 +111,7 @@ def main():
         # target = r'' + a
         # shutil.copyfile(original, target)
         os.system('xdg-open  http://localhost:1313/')
-        os.system("hugo server -D")
+        # os.system("hugo server -D")
 
 
 main()
