@@ -52,9 +52,6 @@ def main():
             file.write("\n")
             while True:
                 text = input("Escreva o que desejar:  ")
-                file.write("\n")
-                file.write(text)
-                file.write("\n")
                 if text == ".":
                     file.close()
                     path = os.path.join("content", "posts", name)
@@ -70,7 +67,9 @@ def main():
 
                 if text == "delete":
                     file.truncate(0)
-
+                file.write("\n")
+                file.write(text)
+                file.write("\n")
         elif i2 == 'nao':
             os.system("hugo")
             os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
