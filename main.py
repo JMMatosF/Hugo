@@ -57,7 +57,7 @@ def main():
                 file.write("\n")
                 if text == ".":
                     file.close()
-                    path = os.path.join("content", "posts", title)
+                    path = os.path.join("content", "posts", name)
                     os.system("hugo")
                     repo.git.add(path + '.md')
                     repo.git.add(os.path.join("docs"))
