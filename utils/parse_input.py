@@ -34,7 +34,7 @@ def parse_input(i1, repo, origin):
                 repo.git.add(os.path.join("docs"))
                 repo.git.add(update=True)
                 repo.git.add(all=True)
-                repo.git.commit('-m', 'ola')
+                repo.git.commit('-m', 'inserido post' + path)
                 origin.push()
                 os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
                 # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
