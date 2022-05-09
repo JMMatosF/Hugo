@@ -1,14 +1,9 @@
 import os
 from cria_post import cria_post
 
-def parse_input(i1, repo, origin):
 
+def parse_input(i1, repo, origin):
     if i1 == 'sim':
-        # nDir = input("nome do site: ")
-        # os.chdir(nDir)
-        # repo.git.add(nDir)
-        # repo.git.commit('-m','ola')
-        # origin.push()
         i2 = input("Pretende criar um novo post?: ")
         post_dictonary = cria_post()
         if i2 == 'sim':
@@ -26,21 +21,20 @@ def parse_input(i1, repo, origin):
             file.write("\n")
             file.write("---")
             file.write("\n")
-            while True:
-                # text = input("Escreva o que desejar:  ")
-                text = post_dictonary['text']
-                if text == ".":
-                    file.close()
-                    path = os.path.join("content", "posts", name1)
-                    os.system("hugo")
-                    repo.git.add(path + '.md')
-                    repo.git.add(os.path.join("docs"))
-                    repo.git.add(update=True)
-                    repo.git.add(all=True)
-                    repo.git.commit('-m', 'ola')
-                    origin.push()
-                    os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
-                    # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
+            # text = input("Escreva o que desejar:  ")
+            text = post_dictonary['text']
+            if text == ".":
+                file.close()
+                path = os.path.join("content", "posts", name1)
+                os.system("hugo")
+                repo.git.add(path + '.md')
+                repo.git.add(os.path.join("docs"))
+                repo.git.add(update=True)
+                repo.git.add(all=True)
+                repo.git.commit('-m', 'ola')
+                origin.push()
+                os.system('xdg-open https://github.com/JMMatosF/Hugo/actions')
+                # os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
 
                 if text == "delete":
                     file.truncate(0)
