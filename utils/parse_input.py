@@ -25,6 +25,7 @@ def parse_input(i1, repo, origin):
             text = post_dictonary['text']
             file.write(text)
             file.write("\n")
+            text = '.'
             if text == ".":
                 file.close()
                 path = os.path.join("content", "posts", name1)
