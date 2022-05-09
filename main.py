@@ -1,9 +1,5 @@
-import os
-# import time
 import git
-from cria_post import cria_post
-# import shutil
-# from flask import Flask
+from flask import Flask
 from git import Repo
 from utils.parse_input import parse_input
 
@@ -25,7 +21,6 @@ try:
     remote = repo.create_remote('origin', url='git@github.com:JMMatosF/Hugo.git')
 except git.exc.GitCommandError as error:
     print('')
-
 
 ########################################
 if __name__ == '__main__':
