@@ -1,6 +1,6 @@
 def cria_post():
-    titulo = "title"
-    texto = '.'
+    titulo = "solipa"
+    texto = 'é lindo\n.'
     return {"title": titulo, "text": texto}
 
 
