@@ -1,4 +1,4 @@
 def cria_post():
-    titulo = "Amanhã"
-    texto = 'é lindo\n'
+    titulo = "hoje é dia"
+    texto = '9 de maio\n'
     return {"title": titulo, "text": texto}
