@@ -1,7 +1,7 @@
 import os
 # import time
 import git
-import cria_post
+from cria_post import cria_post
 # import shutil
 # from flask import Flask
 from git import Repo
@@ -37,8 +37,10 @@ def main():
         # repo.git.commit('-m','ola')
         # origin.push()
         i2 = input("Pretende criar um novo post?: ")
+        post_dictonary = cria_post()
         if i2 == 'sim':
-            title = input("Escolha titulo do post: ")
+            # title = input("Escolha titulo do post: ")
+            title = post_dictonary['title']
             name = title.replace(" ", "_")
             name1 = name.lower()
             path = os.path.join("content", "posts", name1)
@@ -52,7 +54,8 @@ def main():
             file.write("---")
             file.write("\n")
             while True:
-                text = input("Escreva o que desejar:  ")
+                # text = input("Escreva o que desejar:  ")
+                text = post_dictonary['text']
                 if text == ".":
                     file.close()
                     path = os.path.join("content", "posts", name1)
