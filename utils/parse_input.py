@@ -23,6 +23,8 @@ def parse_input(i1, repo, origin):
             file.write("\n")
             # text = input("Escreva o que desejar:  ")
             text = post_dictonary['text']
+            file.write(text)
+            file.write("\n")
             if text == ".":
                 file.close()
                 path = os.path.join("content", "posts", name1)
@@ -38,9 +40,7 @@ def parse_input(i1, repo, origin):
 
                 if text == "delete":
                     file.truncate(0)
-                file.write("\n")
-                file.write(text)
-                file.write("\n")
+
         elif i2 == 'nao':
             os.system("hugo")
             os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
