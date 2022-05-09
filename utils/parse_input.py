@@ -43,7 +43,7 @@ def parse_input(i1, repo, origin):
                     file.truncate(0)
 
         elif i2 == 'nao':
-            os.system("hugo")
+            # os.system("hugo")
             os.system('xdg-open  https://JMMatosF.github.io/Hugo/')
         elif i2 == 'apagar':
             i3 = input("post a apagar: ")
