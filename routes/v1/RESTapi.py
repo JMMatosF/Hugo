@@ -8,8 +8,9 @@ app.config["DEBUG"] = True
 
 add_post = [
     [
-        cria_post(),
         parse_input(),
+        cria_post(),
+
     ]
 ]
 

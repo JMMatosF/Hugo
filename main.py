@@ -1,7 +1,6 @@
 import git
-from flask import Flask
 from git import Repo
-from utils.parse_input import parse_input
+from utils.parse_input import *
 
 repo = Repo('./')
 origin = repo.remote(name='origin')
@@ -25,5 +24,4 @@ except git.exc.GitCommandError as error:
 ########################################
 if __name__ == '__main__':
     i1 = 'sim'
-
-    parse_input(i1, repo, origin)
+    parse_input()
