@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/shcria_post
 export FLASK_APP=./RESTapi.py
 # shellcheck disable=SC2039
 # shellcheck disable=SC2046
