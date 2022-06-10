@@ -1,14 +1,16 @@
 import flask
 from flask import request, jsonify
+from cria_post import cria_post
+from utils.parse_input import parse_input
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 add_post = [
-    {
-        'post_title': 'algo',
-        'post_text': 'text',
-    }
+    [
+        cria_post(),
+        parse_input(),
+    ]
 ]
 
 
@@ -17,7 +19,7 @@ def home():
     return jsonify(add_post)
 
 
-@app.route('/api/v1/resources/books/all', methods=['GET'])
+@app.route('/api/v1/resources/books/all', methods=['POST'])
 def api_all():
     return jsonify(add_post)
 

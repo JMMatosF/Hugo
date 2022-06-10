@@ -1,8 +1,10 @@
 import os
 from cria_post import cria_post
+from main import repo, origin
 
 
-def parse_input(i1, repo, origin):
+def parse_input():
+    i1 = 'sim'
     if i1 == 'sim':
         i2 = input("Pretende criar um novo post?: ")
         post_dictonary = cria_post()
